@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Time-based Task Scheduler</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Time-based Task Scheduler (Greedy Algorithm)</h1>
+      <p class="subtitle">Add tasks with their duration and profit. The system will pick tasks to maximize profit within your available time.</p>
+    </header>
+
+    <section class="input-area">
+      <div class="form-row">
+        <input id="jobId" placeholder="Task Name (e.g., Study)" />
+        <input id="time" type="number" min="1" placeholder="Time (hours)" />
+        <input id="profit" type="number" min="0" placeholder="Profit / Priority" />
+        <button id="addBtn">Add Task</button>
+      </div>
+
+      <div class="form-row small">
+        <input id="availableTime" type="number" min="1" placeholder="Available Time (hours)" />
+        <button id="runBtn">Run Scheduler</button>
+        <button id="clearBtn">Clear Tasks</button>
+        <button id="sampleBtn">Load Sample</button>
+      </div>
+    </section>
+
+    <section class="tables">
+      <div class="panel">
+        <h3>Tasks List</h3>
+        <table id="jobsTable">
+          <thead><tr><th>#</th><th>Task</th><th>Time</th><th>Profit</th><th></th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h3>Scheduled Output</h3>
+        <div id="output">
+          <p>No schedule yet. Click <strong>Run Scheduler</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Project: Web-based Task Scheduler using Greedy Algorithm (Time-based version)</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
